@@ -1,0 +1,667 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+
+header {
+    background-image:
+        url('../images/bg-pattern-intro-mobile.svg'),
+        linear-gradient(135deg, hsl(0deg 100% 72%), hsl(353deg 100% 62%));
+    background-position: 32% 35%;
+    background-size: 300% auto;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 24px 130px 24px;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    gap: 60px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 15px;
+    position: relative;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+nav.open {
+    display: block;
+
+}
+
+.contenedor-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.contenedor-menu a {
+    color: hsl(208, 49%, 24%);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.contenedor-menu i {
+    font-size: 12px;
+    color: hsl(356, 100%, 66%);
+}
+
+.contenedor-submenu i {
+    transition: transform 0.3s ease;
+}
+
+.contenedor-submenu.open i {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    display: none;
+}
+
+.contenedor-submenu.open .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    background-color: hsl(240, 7%, 94%);
+    border-radius: 6px;
+    padding: 18px 0;
+    margin-top: 12px;
+}
+
+.submenu li a {
+    color: hsl(207, 13%, 34%);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-login,
+.btn-sign {
+    display: none;
+}
+
+.btn-menu {
+    background: transparent;
+    cursor: pointer;
+    font-size: 27px;
+    color: hsl(0, 0%, 100%);
+}
+
+.contenedor-hero h1 {
+    padding: 0px 10px 10px 10px;
+}
+
+
+.contenedor-hero p {
+    padding: 0px 20px 10px 20px;
+}
+
+.button-hero {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-start {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(356, 100%, 66%);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+.btn-start:hover {
+    background-color: hsl(355, 100%, 74%);
+    border-color: hsl(355, 100%, 74%);
+    color: hsl(0, 0%, 100%);
+}
+
+.btn-learn {
+    color: hsl(0, 0%, 100%);
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid hsl(0, 0%, 100%);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+.btn-learn:hover {
+    color: hsl(356, 100%, 66%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.seccion1-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 24px 60px 24px;
+    text-align: center;
+    gap: 35px;
+}
+
+.seccion1-main h2,
+.seccion1-main h3 {
+    color: hsl(208, 49%, 24%);
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 30px 0 15px 0;
+}
+
+.seccion1-main p {
+    line-height: 1.6;
+    padding: 0 10px;
+    color: hsl(207, 13%, 34%);
+    font-size: 15px;
+}
+
+.seccion2-celulares {
+    background-image:
+        url('../images/bg-pattern-circles.svg'),
+        linear-gradient(135deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-position: center -228px, center;
+    background-size: 165% auto, cover;
+    background-repeat: no-repeat;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    margin-top: 150px;
+    padding: 245px 30px 100px 30px;
+}
+
+.imagen-celus {
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-celus img {
+    width: 100%;
+    max-width: 340px;
+}
+
+.contenido-celus {
+    position: relative;
+    z-index: 1;
+}
+
+.contenido-celus h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.contenido-celus p {
+    color: hsl(0, 0%, 100%);
+    line-height: 1.7;
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+.seccion3-laptop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 70px 24px 90px 24px;
+    gap: 35px;
+}
+
+.seccion3-laptop h2,
+.seccion3-laptop h3 {
+    padding: 20px 20px 10px 20px;
+    color: hsl(208, 49%, 24%);
+}
+
+.imagen-laptop img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.seccion3-laptop p {
+    line-height: 1.6;
+    padding: 0 10px;
+    color: hsl(207, 13%, 34%);
+    font-size: 15px;
+}
+
+.contenedor-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: hsl(240, 10%, 16%);
+    color: hsl(0, 0%, 100%);
+    border-top-right-radius: 100px;
+    padding: 15px 24px;
+}
+
+.contenedor-footer h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.menu-footer h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contenedor-footer a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: #c8c8cb;
+}
+
+.contenedor-footer a:hover {
+    text-decoration: underline;
+    color: hsl(0, 0%, 100%);
+}
+
+.menu-footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-footer {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Medias Q*/
+
+@media (min-width: 780px) {
+
+    .btn-menu {
+        display: none;
+    }
+
+    .navbar {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+        padding: 0;
+        gap: 20px;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+
+    .contenedor-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        font-weight: 400;
+    }
+
+    .contenedor-menu a {
+        color: hsl(0, 0%, 100%);
+        font-size: 14px;
+    }
+
+    .contenedor-menu li {
+        width: auto;
+        padding: 0;
+    }
+
+    .contenedor-menu i {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .contenedor-menu a:hover {
+        text-decoration: underline;
+    }
+
+    .contenedor-menu li i {
+        transition: transform 0.3s ease;
+    }
+
+    .btn-login,
+    .btn-sign {
+        display: inline-block;
+        white-space: nowrap;
+        cursor: pointer;
+        padding: 8px 15px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 25px;
+    }
+
+    .btn-login {
+        background: transparent;
+        color: hsl(0, 0%, 100%);
+        padding: 12px 24px;
+        border: 1px solid transparent;
+        margin-left: auto;
+    }
+
+    .btn-login:hover {
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(356, 100%, 66%);
+        border-radius: 20px;
+    }
+
+    .btn-sign {
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(356, 100%, 66%);
+        padding: 10px 20px;
+    }
+
+    .btn-sign:hover {
+        background-color: hsl(355, 100%, 74%);
+        color: hsl(0, 0%, 100%);
+    }
+
+
+    .button-hero {
+        padding-top: 50px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .menu-footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header {
+        padding: 60px 160px 150px 160px;
+        background-image:
+            url('../images/bg-pattern-intro-desktop.svg'),
+            linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        background-position: 25% 52%, center;
+        background-size: 220% auto, cover;
+        gap: 115px;
+    }
+
+    .contenedor-menu a {
+        color: hsl(0, 0%, 100%);
+        font-size: 16px;
+    }
+
+    .contenedor-submenu {
+        position: relative;
+    }
+
+    .contenedor-submenu i {
+        transition: transform 0.3s ease;
+    }
+
+    .contenedor-submenu.open i {
+        transform: rotate(180deg);
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .contenedor-submenu.open .submenu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 38px;
+        left: -15px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 6px;
+        padding: 24px 28px;
+        min-width: 165px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        z-index: 20;
+        gap: 12px;
+    }
+
+    .submenu li a {
+        color: hsl(208, 49%, 24%);
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .submenu li a:hover {
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .contenedor-hero h1 {
+        font-size: 60px;
+    }
+
+    .seccion1-main {
+        padding: 130px 0 30px 0;
+        gap: 0;
+        position: relative;
+    }
+
+    .seccion1-main h2 {
+        font-size: 38px;
+        margin: 0 0 -90px 0;
+    }
+
+    .contenedor-seccion1 {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        padding-left: 160px;
+    }
+
+    .textos-seccion1 {
+        width: 50%;
+        padding-right: 40px;
+    }
+
+    .seccion1-main h3 {
+        font-size: 28px;
+        margin: 50px 0 20px 0;
+    }
+
+    .seccion1-main h3 br {
+        display: none;
+    }
+
+    .seccion1-main p {
+        padding: 0;
+        line-height: 1.75;
+        max-width: 510px;
+        font-size: 16px;
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .imagen-seccion1 {
+        width: 55%;
+        height: 820px;
+        background-image: url('../images/illustration-editor-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 118% auto;
+    }
+
+    .seccion2-celulares {
+        margin-top: 0px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: left;
+        padding: 110px 160px;
+        background-position: -50% 80%, center;
+        background-size: 70% auto, cover;
+    }
+
+    .imagen-celus {
+        width: 50%;
+        top: -70px;
+        left: 140px;
+        transform: none;
+        justify-content: flex-start;
+    }
+
+    .imagen-celus img {
+        max-width: 540px;
+    }
+
+    .contenido-celus {
+        width: 48%;
+    }
+
+    .contenido-celus h2 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .contenido-celus h2 br {
+        display: none;
+    }
+
+    .contenido-celus p {
+        line-height: 1.75;
+        max-width: 500px;
+        font-size: 16px;
+    }
+
+    .seccion3-laptop {
+        flex-direction: row;
+        align-items: center;
+        padding: 100px 160px 100px 0;
+        gap: 0;
+    }
+
+
+    .imagen-laptop img {
+        display: none;
+    }
+
+    .imagen-laptop {
+        width: 50%;
+        height: 720px;
+        background-image: url('../images/illustration-laptop-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 138% auto;
+        background-position: right center;
+    }
+
+    .textos-laptop {
+        text-align: left;
+        width: 45%;
+        padding-left: 40px;
+    }
+
+    .seccion3-laptop h2,
+    .seccion3-laptop h3 {
+        padding: 0;
+        font-size: 28px;
+        margin: 50px 0 20px 0;
+    }
+
+    .seccion3-laptop p {
+        padding: 0;
+        line-height: 1.75;
+        max-width: 510px;
+        font-size: 16px;
+    }
+
+    .contenedor-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 70px 260px 70px 160px;
+    }
+
+    .menu-footer {
+        font-size: 16px;
+        text-align: left;
+    }
+}
